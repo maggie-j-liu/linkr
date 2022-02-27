@@ -4,15 +4,14 @@
   "description": "",
   "license": "",
   "sideEffects": false,
-  "type": "module",
   "scripts": {
     "build": "remix build",
-    "dev": "NODE_ENV=development netlify dev",
+    "dev": "cross-env NODE_ENV=development netlify dev",
     "postinstall": "remix setup node",
-    "start": "NODE_ENV=production netlify dev",
-    "register:guild": "dotenv -- node scripts/guild.js",
-    "register:global": "dotenv -- node scripts/global.js",
-    "unregister:guild": "dotenv -- node scripts/unregister.js"
+    "start": "cross-env NODE_ENV=production netlify dev",
+    "register:guild": "dotenv -- node scripts/guild.mjs",
+    "register:global": "dotenv -- node scripts/global.mjs",
+    "unregister:guild": "dotenv -- node scripts/unregister.mjs"
   },
   "dependencies": {
     "@netlify/functions": "^0.10.0",
@@ -25,6 +24,7 @@
   },
   "devDependencies": {
     "@remix-run/dev": "^1.2.2",
+    "cross-env": "^7.0.3",
     "dotenv-cli": "^5.0.0",
     "node-fetch": "^3.2.0"
   },

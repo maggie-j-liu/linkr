@@ -1,4 +1,4 @@
-import createMessage from "../utils/createMessage.js";
+import createMessage from "../utils/createMessage.mjs";
 
 const ping = {
   name: "ping",

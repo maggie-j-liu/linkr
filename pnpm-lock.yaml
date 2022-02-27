@@ -5,6 +5,7 @@ specifiers:
   '@remix-run/dev': ^1.2.2
   '@remix-run/netlify': ^1.2.2
   '@remix-run/react': ^1.2.2
+  cross-env: ^7.0.3
   discord-interactions: ^2.4.1
   dotenv-cli: ^5.0.0
   node-fetch: ^3.2.0
@@ -23,6 +24,7 @@ dependencies:
 
 devDependencies:
   '@remix-run/dev': 1.2.2_react-dom@17.0.2+react@17.0.2
+  cross-env: 7.0.3
   dotenv-cli: 5.0.0
   node-fetch: 3.2.0
 
@@ -610,6 +612,14 @@ packages:
   /cookie/0.4.2:
     resolution: {integrity: sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==}
     engines: {node: '>= 0.6'}
+
+  /cross-env/7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
+    dev: true
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}

@@ -1,5 +1,5 @@
-import { getCommandsData } from "../app/utils/getCommands.js";
-import register from "./register.js";
+import { getCommandsData } from "../app/utils/getCommands.mjs";
+import register from "./register.mjs";
 
 const commands = getCommandsData();
 

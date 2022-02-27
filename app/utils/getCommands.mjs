@@ -1,4 +1,4 @@
-import * as commands from "../commands/index.js";
+import * as commands from "../commands/index.mjs";
 
 export const getCommands = () => {
   return Object.values(commands);
