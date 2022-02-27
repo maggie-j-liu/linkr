@@ -7,6 +7,12 @@ export const loader = async ({ request, params }) => {
   if (!item) {
     return json("Not found", 404);
   }
+  await db.update(
+    {
+      clicks: db.util.increment(1),
+    },
+    slug
+  );
   return redirect(
     `${item.url}/${rest.join("/")}${new URL(request.url).search ?? ""}`
   );
