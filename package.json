@@ -11,7 +11,8 @@
     "start": "cross-env NODE_ENV=production netlify dev",
     "register:guild": "dotenv -- node scripts/guild.mjs",
     "register:global": "dotenv -- node scripts/global.mjs",
-    "unregister:guild": "dotenv -- node scripts/unregister.mjs"
+    "unregister:guild": "dotenv -- node scripts/unregisterGuild.mjs",
+    "unregister:global": "dotenv -- node scripts/unregisterGlobal.mjs"
   },
   "dependencies": {
     "@netlify/functions": "^0.10.0",

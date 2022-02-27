@@ -1,3 +1,4 @@
+import createMenu from "../utils/createMenu.mjs";
 import createMessage from "../utils/createMessage.mjs";
 import createShortLink from "../utils/createShortLink.mjs";
 import getUserId from "../utils/getUserId.mjs";
@@ -38,7 +39,7 @@ const shorten = {
     } else {
       content = `Linked ${url} to <${process.env.DOMAIN}/${response.slug}>`;
     }
-    return createMessage(content);
+    return createMessage(content, false, createMenu(response.slug));
   },
 };
 
