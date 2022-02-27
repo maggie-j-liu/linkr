@@ -1,7 +1,6 @@
 import fetch from "node-fetch";
 const register = async (url, commandsList) => {
   console.log("registering commands", commandsList);
-  console.log(process.env.TOKEN);
   const response = await fetch(url, {
     headers: {
       "Content-Type": "application/json",

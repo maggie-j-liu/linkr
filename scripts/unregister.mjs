@@ -1,6 +1,5 @@
 import fetch from "node-fetch";
 
-console.log(process.env.APPLICATION_ID);
 const unregister = await fetch(
   `https://discord.com/api/v9/applications/${process.env.APPLICATION_ID}/guilds/${process.env.GUILD_ID}/commands`,
   {

@@ -6,8 +6,10 @@ specifiers:
   '@remix-run/netlify': ^1.2.2
   '@remix-run/react': ^1.2.2
   cross-env: ^7.0.3
+  deta: ^1.0.2
   discord-interactions: ^2.4.1
   dotenv-cli: ^5.0.0
+  nanoid: ^3.3.1
   node-fetch: ^3.2.0
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -17,7 +19,9 @@ dependencies:
   '@netlify/functions': 0.10.0
   '@remix-run/netlify': 1.2.2_1d1ce03cfafdba27bba741ad8440c333
   '@remix-run/react': 1.2.2_react-dom@17.0.2+react@17.0.2
+  deta: 1.0.2
   discord-interactions: 2.4.1
+  nanoid: 3.3.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   remix: 1.2.2
@@ -704,6 +708,14 @@ packages:
     resolution: {integrity: sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==}
     engines: {node: '>=6'}
     dev: true
+
+  /deta/1.0.2:
+    resolution: {integrity: sha512-VsUuiXrB8AqjFuhtD9/quD/4E2tKK2cKMGHjmny9//hTWb5jSSPRCn2A9wkFcOQyK0YY+rt7RhQKTrUmw90bKQ==}
+    dependencies:
+      node-fetch: 2.6.7
+    transitivePeerDependencies:
+      - encoding
+    dev: false
 
   /dicer/0.3.0:
     resolution: {integrity: sha512-MdceRRWqltEG2dZqO769g27N/3PXfcKl04VhYnBlo2YhH7zPi88VebsjTKclaOyiuMaGU72hTfw3VkUitGcVCA==}
@@ -2142,6 +2154,12 @@ packages:
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
+
+  /nanoid/3.3.1:
+    resolution: {integrity: sha512-n6Vs/3KGyxPQd6uO0eH4Bv0ojGSUvuLlIHtC3Y0kEO23YRge8H9x1GCzLn28YX0H66pMkxuaeESFq4tKISKwdw==}
+    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
+    hasBin: true
+    dev: false
 
   /node-addon-api/1.7.2:
     resolution: {integrity: sha512-ibPK3iA+vaY1eEjESkQkM0BbCqFOaZMiXRTtdB0u7b4djtY6JnsjvPdUHVMg6xQt3B8fpTTWHI9A+ADjM9frzg==}
