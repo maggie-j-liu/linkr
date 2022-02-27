@@ -5,7 +5,7 @@ import {
 
 const createMessage = (message, ephemeral = false) => {
   return {
-    type: InteractionResponseType.ChannelMessageWithSource,
+    type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
     data: {
       content: message,
       flags: ephemeral ? InteractionResponseFlags.EPHEMERAL : undefined,
