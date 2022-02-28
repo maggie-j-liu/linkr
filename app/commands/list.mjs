@@ -18,9 +18,9 @@ const list = {
       })
       .map(
         (link, i) =>
-          `${i + 1}. <${process.env.DOMAIN}/${link.key}>, ${link.clicks} click${
-            link.clicks !== 1 ? "s" : ""
-          }`
+          `${i + 1}. <${process.env.DOMAIN}/${link.key}> -> ${link.url}, ${
+            link.clicks
+          } click${link.clicks !== 1 ? "s" : ""}`
       );
     return createMessage(linksMessage.join("\n"));
   },

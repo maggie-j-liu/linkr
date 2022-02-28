@@ -2,6 +2,7 @@ import createMenu from "../utils/createMenu.mjs";
 import createMessage from "../utils/createMessage.mjs";
 import createShortLink from "../utils/createShortLink.mjs";
 import getUserId from "../utils/getUserId.mjs";
+import validateUrl from "../utils/validateUrl.mjs";
 
 const shorten = {
   name: "shorten",
@@ -24,9 +25,11 @@ const shorten = {
     const route = message.data.options.find(
       (opt) => opt.name === "route"
     )?.value;
-    if (!url.startsWith("http://") && !url.startsWith("https://")) {
-      return createMessage("Please specify a valid URL.", true);
+    const valid = validateUrl(url);
+    if (valid !== true) {
+      return valid;
     }
+
     const userId = getUserId(message);
     const response = await createShortLink({
       url,

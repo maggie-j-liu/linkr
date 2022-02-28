@@ -8,6 +8,7 @@ import createMessage from "~/utils/createMessage.mjs";
 import db from "~/utils/database.mjs";
 import getLink from "~/utils/getLink.mjs";
 import getUserId from "~/utils/getUserId.mjs";
+import validateUrl from "~/utils/validateUrl.mjs";
 import { getCommands } from "../../utils/getCommands.mjs";
 
 export const action = async ({ request }) => {
@@ -123,8 +124,9 @@ export const action = async ({ request }) => {
     if (result.error) {
       return createMessage(result.error, true);
     }
-    if (!url.startsWith("http://") && !url.startsWith("https://")) {
-      return createMessage("Please specify a valid URL.", true);
+    const valid = validateUrl(url);
+    if (valid !== true) {
+      return valid;
     }
     await db.update({ url }, key);
     return createMessage(

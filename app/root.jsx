@@ -4,11 +4,19 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
 } from "remix";
+import styles from "./styles/app.css";
+
+export function links() {
+  return [
+    { rel: "icon", href: "/assets/favicon.png" },
+    { rel: "stylesheet", href: styles },
+  ];
+}
 
 export function meta() {
-  return { title: "New Remix App" };
+  return { title: "Linkr: A serverless link shortener Discord bot" };
 }
 
 export default function App() {
