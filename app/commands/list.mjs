@@ -12,9 +12,9 @@ const list = {
     const linksMessage = allLinks
       .sort((a, b) => {
         if (a.clicks !== b.clicks) {
-          return a.clicks > b.clicks;
+          return a.clicks > b.clicks ? -1 : 1;
         }
-        return a.key < b.key;
+        return a.key < b.key ? -1 : 1;
       })
       .map(
         (link, i) =>

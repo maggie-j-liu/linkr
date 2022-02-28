@@ -37,7 +37,7 @@ const shorten = {
     if (response.error) {
       content = `Error: ${response.error}`;
     } else {
-      content = `Linked ${url} to <${process.env.DOMAIN}/${response.slug}>`;
+      content = `Created <${process.env.DOMAIN}/${response.slug}> as a short link for ${url}`;
     }
     return createMessage(content, false, createMenu(response.slug));
   },

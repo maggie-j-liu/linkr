@@ -7,6 +7,12 @@ const createMenu = (key) => {
           {
             type: 2,
             style: 1,
+            label: "Edit Link",
+            custom_id: `edit-${key}`,
+          },
+          {
+            type: 2,
+            style: 3,
             label: "View Clicks",
             custom_id: `clicks-${key}`,
           },
